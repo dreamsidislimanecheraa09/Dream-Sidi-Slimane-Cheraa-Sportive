@@ -98,10 +98,10 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro';
+		font-family: 'Monospace';
 		font-weight: 300;
-		color: #777;
-		line-height: 1.65em;
+		color: #000000;
+		line-height: 1.90em;
 		font-size: 15pt;
 	}
 
@@ -2703,3 +2703,4 @@ input, select, textarea {
 				}
 
 	}
+	
