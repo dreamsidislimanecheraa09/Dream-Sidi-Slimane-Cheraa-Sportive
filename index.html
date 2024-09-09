@@ -3,88 +3,177 @@
 	<head>
 		<title>D.S.S.C</title>
 		<meta charset="utf-8" />
-		<link rel="shortcut icon" type="x-icon" href="/images/dssc.png"
-		 meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="image/x-icon" href="/images/dssc.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Dream Sidi Slimane Cheraa</title>
+				<style>
+					/* General styling for the page */
+					body {
+						font-family: Arial, sans-serif;
+					}
+			
+					/* Styling for the container and images */
+					.image {
+						cursor: pointer;
+						transition: transform 0.2s ease-in-out;
+					}
+			
+					.image:hover {
+						transform: scale(1.05);
+					}
+			
+					/* Lightbox/Cadre styling */
+					.lightbox {
+						display: none;
+						position: fixed;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: rgba(0, 0, 0, 0.8); /* Dark background */
+						justify-content: center;
+						align-items: center;
+						z-index: 1000;
+						backdrop-filter: blur(10px); /* Blurred background effect */
+					}
+			
+					.lightbox.active {
+						display: flex;
+					}
+			
+					/* Enlarged image in the cadre */
+					.lightbox img {
+						max-width: 80%;
+						max-height: 80%;
+						box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+						border: 5px solid white;
+					}
+			
+					/* Close button */
+					.lightbox .close {
+						position: absolute;
+						top: 20px;
+						right: 40px;
+						font-size: 40px;
+						color: white;
+						cursor: pointer;
+					}
+			
+				</style>
+			</head>
+			<body>
+			
 			<!-- Header -->
-				<section id="header">
-					<div class="container">
-
-						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Dream Sidi Slimane Cheraa  </a></h1>
-							<p>Ecole de Foot à Berkane !</p>
-													<!-- Highlight -->
-													<article class="box highlight">
-														<header>
-															<h3><a href="#">Débutons avec notre Logo !</a></h3>
-														</header>
-														<a href="#" class="image left"><img src="images/notre logo.png" alt="" /></a>
-														<p>Pour représenter notre fierté pour notre ville de Berkane, nous avons créé un logo distinctif en orange vif. Cette couleur symbolise notre attachement à notre communauté locale tout en capturant l'énergie et la passion pour le football. Au cœur de ce logo, notre nom "Sidi Slimane Cheraa" est fièrement affiché en français et en arabe, unifiant nos racines culturelles avec notre engagement envers le sport. Ce logo incarne notre identité et notre héritage, servant de symbole visuel fort qui inspire nos joueurs et rassemble nos supporters autour d'une cause commune : représenter avec fierté notre ville et notre équipe sur tous les terrains.</p>
-														<ul class="actions">
-															<li><a href="https://dreamsidislimaneccheraa.my.canva.site/" class="button icon solid fa-file">Logo:Fierté d'équipe !</a></li>
-														</ul>
-													</article>
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a class="icon solid fa-home" href="index.html"><span>Notre Ecole de Football ! </span></a></li>
-									<li>
-				</section>
-			<!-- Features -->
-				<section id="features">
-					<div class="container">
+			<section id="header">
+				<div class="container">
+			
+					<!-- Logo -->
+					<h1 id="logo"><a href="index.html">Dream Sidi Slimane Cheraa</a></h1>
+					<p>Ecole de Foot à Berkane !</p>
+			
+					<!-- Highlight -->
+					<article class="box highlight">
 						<header>
-							<h2>Bienvenue, Voilà notre <strong>Programme d'Entrainements !</strong>!</h2>
+							<h3><a href="#">Débutons avec notre Logo !</a></h3>
 						</header>
-						<div class="row aln-center">
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Feature -->
-									<section>
-										<a href="#" class="image featured"><img src="images/Mercredi.jpg" alt="" /></a>
-										<header>
-											<h3>Mercredi</h3>
-										</header>
-										<p>Nous vous rappelons que la première séance d'entraînement de la semaine a lieu le mercredi de 15h à 17h.
-									</section>
-
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Feature -->
-									<section>
-										<a href="#" class="image featured"><img src="images/vendredi.jpg" alt="" /></a>
-										<header>
-											<h3>Vendredi</h3>
-										</header>
-										<p>Nous vous rappelons que la deuxième séance d'entraînement de la semaine a lieu le Vendredi de 15h à 17h.
-									</section>
-
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Feature -->
-									<section>
-										<a href="#" class="image featured"><img src="images/dimanche.jpg" alt="" /></a>
-										<header>
-											<h3>Dimanche</h3>
-										</header>
-										<p>Nous vous rappelons que la troisième séance d'entraînement de la semaine a lieu le Dimanche de 12h à 14h.
-									</section>
-
-							</div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><a href="https://dreamsidislimaneccheraa.my.canva.site/dagisvcsp6a" class="button icon solid fa-file">Voir Programme Autrement !</a></li>
-								</ul>
-							</div>
+						<a href="#" class="image left" onclick="openLightbox('images/notre logo.png')">
+							<img src="images/notre logo.png" alt="Notre Logo" />
+						</a>
+						<p>Pour représenter notre fierté pour notre ville de Berkane, nous avons créé un logo distinctif en orange vif. Cette couleur symbolise notre attachement à notre communauté locale tout en capturant l'énergie et la passion pour le football. Au cœur de ce logo, notre nom "Sidi Slimane Cheraa" est fièrement affiché en français et en arabe, unifiant nos racines culturelles avec notre engagement envers le sport. Ce logo incarne notre identité et notre héritage, servant de symbole visuel fort qui inspire nos joueurs et rassemble nos supporters autour d'une cause commune : représenter avec fierté notre ville et notre équipe sur tous les terrains.</p>
+						<ul class="actions">
+							<li><a href="https://dreamsidislimaneccheraa.my.canva.site/" class="button icon solid fa-file">Logo: Fierté d'équipe !</a></li>
+						</ul>
+					</article>
+			
+				</div>
+			</section>
+			
+			<!-- Features Section -->
+			<section id="features">
+				<div class="container">
+					<header>
+						<h2>Bienvenue, Voilà notre <strong>Programme d'Entrainements !</strong>!</h2>
+					</header>
+					<div class="row aln-center">
+						<div class="col-4 col-6-medium col-12-small">
+							<!-- Feature -->
+							<section>
+								<a href="#" class="image featured" onclick="openLightbox('images/Mercredi.jpg')">
+									<img src="images/Mercredi.jpg" alt="Mercredi" />
+								</a>
+								<header>
+									<h3>Mercredi</h3>
+								</header>
+								<p>Nous vous rappelons que la première séance d'entraînement de la semaine a lieu le mercredi de 15h à 17h.</p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<!-- Feature -->
+							<section>
+								<a href="#" class="image featured" onclick="openLightbox('images/vendredi.jpg')">
+									<img src="images/vendredi.jpg" alt="Vendredi" />
+								</a>
+								<header>
+									<h3>Vendredi</h3>
+								</header>
+								<p>Nous vous rappelons que la deuxième séance d'entraînement de la semaine a lieu le Vendredi de 15h à 17h.</p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<!-- Feature -->
+							<section>
+								<a href="#" class="image featured" onclick="openLightbox('images/dimanche.jpg')">
+									<img src="images/dimanche.jpg" alt="Dimanche" />
+								</a>
+								<header>
+									<h3>Dimanche</h3>
+								</header>
+								<p>Nous vous rappelons que la troisième séance d'entraînement de la semaine a lieu le Dimanche de 12h à 14h.</p>
+							</section>
+						</div>
+						<div class="col-12">
+							<ul class="actions">
+								<li><a href="https://dreamsidislimaneccheraa.my.canva.site/dagisvcsp6a" class="button icon solid fa-file">Voir Programme Autrement !</a></li>
+							</ul>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
+			
+			<!-- Lightbox/Cadre for Enlarged Images -->
+			<div id="lightbox" class="lightbox">
+				<span class="close" onclick="closeLightbox()">&times;</span>
+				<img id="lightboxImage" src="" alt="Enlarged Image">
+			</div>
+			
+			<script>
+				// Function to open the lightbox and display the clicked image
+				function openLightbox(imageSrc) {
+					var lightbox = document.getElementById('lightbox');
+					var lightboxImage = document.getElementById('lightboxImage');
+					lightboxImage.src = imageSrc;
+					lightbox.classList.add('active');
+				}
+			
+				// Function to close the lightbox
+				function closeLightbox() {
+					var lightbox = document.getElementById('lightbox');
+					lightbox.classList.remove('active');
+				}
+			</script>
+			
+			</body>
+			</html>
+			
 
 			<!-- Banner -->
 				<section id="banner">
@@ -98,90 +187,143 @@
 					<div class="container">
 						<div class="row">
 
-							<!-- Content -->
-								<div id="content" class="col-8 col-12-medium">
-									<!-- Post -->
-									<article class="box post">
-										<header>
-											<h2><a href="#">Notre <strong>Président !</strong>
-										</header>
-										<a href="#" class="image featured"><img src="images/notre president.png" alt="" /></a>
-										<h3>Quel est le role de notre Président ?</h3>
-										<p>Notre association de football, Dream Sidi Slimane Cheraa Sportive, est dirigée par notre président, M. Bekkaoui El Bekkay. En tant que président de notre club de football, M. Bekkaoui El Bekkay joue un rôle crucial. Il est responsable de la gestion globale de l'association, supervisant les opérations quotidiennes et assurant la coordination entre les différents départements. Son leadership est essentiel pour le développement stratégique du club, la planification des événements, et la prise de décisions importantes concernant les équipes et les compétitions. M. Bekkaoui El Bekkay représente également l'association lors des réunions officielles et des rencontres avec d'autres clubs et organisations sportives.
-																				<!-- Post -->
-										<article class="box post">
-											<header>
-												<h2><a href="#">Nos <strong>Membres !</strong>
-											</header>
-											<a href="#" class="image featured"><img src="images/Membres DSSC.jpg" alt="" /></a>
-											<h3>Qui sont les membres de notre association ?</h3>
-											<p>Dans notre association de football "Dream Sidi Slimane Cheraa", plusieurs membres jouent un rôle crucial dans son développement. Un exemple pertinent est celui de M. Mabrouk Abdelhak, notre Secrétaire Général, dont l'engagement et la gestion efficace sont essentiels pour le bon fonctionnement de l'association. De même, notre trésorier, M. El Majnioui Abdelkader, assure une gestion financière rigoureuse qui soutient nos activités et projets.
+							<!DOCTYPE html>
+							<html lang="en">
+							<head>
+								<meta charset="UTF-8">
+								<meta name="viewport" content="width=device-width, initial-scale=1.0">
+								<title>Dream Sidi Slimane Cheraa</title>
+								<style>
+									/* General styling for the page */
+									body {
+										font-family: Arial, sans-serif;
+									}
+							
+									/* Styling for the container and images */
+									.image {
+										cursor: pointer;
+										transition: transform 0.2s ease-in-out;
+									}
+							
+									.image:hover {
+										transform: scale(1.05);
+									}
+							
+									/* Lightbox/Cadre styling */
+									.lightbox {
+										display: none;
+										position: fixed;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										background: rgba(0, 0, 0, 0.8); /* Dark background */
+										justify-content: center;
+										align-items: center;
+										z-index: 1000;
+										backdrop-filter: blur(10px); /* Blurred background effect */
+									}
+							
+									.lightbox.active {
+										display: flex;
+									}
+							
+									/* Enlarged image in the cadre */
+									.lightbox img {
+										max-width: 80%;
+										max-height: 80%;
+										box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+										border: 5px solid white;
+									}
+							
+									/* Close button */
+									.lightbox .close {
+										position: absolute;
+										top: 20px;
+										right: 40px;
+										font-size: 40px;
+										color: white;
+										cursor: pointer;
+									}
+							
+								</style>
+							</head>
+							<body>
+							
 
-												Nos membres sont des piliers indispensables de notre structure, contribuant activement à la croissance et à la réussite de notre association.
-												
-												
-												
-											
-											
-									<!-- Post -->
-										<article class="box post">
-											<header>
-												<h2><a href="#">Notre <strong>Objectif</strong> !<br />
-											</header>
-											<a href="#" class="image featured"><img src="images/notre objectif.png" alt="" /></a>
-											<h3>Pourquoi Dream Sidi Slimane Cheraa ?</h3>
-											<p>À Dream Sidi Slimane Cheraa, nous visons à développer de manière intensive les compétences footballistiques de chaque joueur, en les guidant vers l'excellence sur le terrain avec passion et détermination.</p>
-											<ul class="actions">
-												<li><a href="https://www.canva.com/design/DAGIbi6Gx5Q/ysympulS_ySLZf477iptFQ/edit?utm_content=DAGIbi6Gx5Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="button icon solid fa-file">Bienvenue Alors !</a></li>
-											</ul>
-										</article>
-
-									<!-- Post -->
-										<article class="box post">
-											<header>
-												<h2><a href="#">Notre <strong>Staff !</strong>
-											</header>
-											<a href="#" class="image featured"><img src="images/notre staff (2).jpg" alt="" /></a>
-											<h3>Quel est le rôle des staffs ?</h3>
-											<p>Notre club de football va bien au-delà d'être simplement un lieu où l'on joue. C'est une véritable communauté où les joueurs sont façonnés par un staff passionné et dévoué. Imaginez un groupe de mentors, d'entraîneurs et de spécialistes qui aident non seulement à améliorer les compétences des joueurs, mais aussi à les guider dans leur développement personnel, avec une attention particulière et une grande expertise.
-
-												Chaque membre de notre équipe apporte une contribution unique à notre succès. Les entraîneurs agissent comme des guides expérimentés sur le terrain, aidant nos jeunes talents à développer leurs compétences techniques tout en leur inculquant des valeurs comme le fair-play et la résilience.
-																								
-												En dehors du terrain, notre équipe administrative gère les détails logistiques pour que tout se passe sans accroc, de l'inscription des joueurs à l'organisation des déplacements pour les tournois. Leur travail discret mais crucial permet à nos joueurs de se concentrer pleinement sur leur développement et leur jeu.
-												
-												Ensemble, ce staff remarquable crée un environnement dynamique et harmonieux où chaque joueur peut s'épanouir. Leur engagement constant pour s'améliorer et leur passion pour le football transforment notre club en un véritable centre de développement et de succès. Chaque victoire, chaque progrès personnel est le résultat de leur engagement indéfectible et de leur expertise collective, propulsant non seulement nos joueurs mais aussi notre club vers de nouveaux sommets de réussite et de reconnaissance.
-												
-												
-												
-												</p>
-											<ul class="actions">
-												<li><a href="https://books.openedition.org/puc/18711?lang=en" class="button icon solid fa-file">Merci D'avoir vu notre Staff !</a></li>
-											</ul>
-										</article>
-
-								</div>
-
-							<!-- Sidebar -->
-								<div id="sidebar" class="col-4 col-12-medium">
-
-									<!-- Excerpts -->
-										<section>
-											<ul class="divided">
-												<li>
-
-													<!-- Excerpt -->
+							
+							<!-- Main Section -->
+							<section id="main">
+								<div class="container">
+									<div class="row">
+							
+										<!-- Content -->
+										<div id="content" class="col-8 col-12-medium">
+											<!-- Post -->
+											<article class="box post">
+												<header>
+													<h2><a href="#">Notre <strong>Président !</strong></a></h2>
+												</header>
+												<a href="#" class="image featured" onclick="openLightbox('images/notre president.png')"><img src="images/notre president.png" alt="" /></a>
+												<h3>Quel est le role de notre Président ?</h3>
+												<p>Notre association de football, Dream Sidi Slimane Cheraa Sportive, est dirigée par notre président, M. Bekkaoui El Bekkay. En tant que président de notre club de football, M. Bekkaoui El Bekkay joue un rôle crucial. Il est responsable de la gestion globale de l'association, supervisant les opérations quotidiennes et assurant la coordination entre les différents départements. Son leadership est essentiel pour le développement stratégique du club, la planification des événements, et la prise de décisions importantes concernant les équipes et les compétitions. M. Bekkaoui El Bekkay représente également l'association lors des réunions officielles et des rencontres avec d'autres clubs et organisations sportives.</p>
+											</article>
+							
+											<!-- Post -->
+											<article class="box post">
+												<header>
+													<h2><a href="#">Nos <strong>Membres !</strong></a></h2>
+												</header>
+												<a href="#" class="image featured" onclick="openLightbox('images/Membres DSSC.jpg')"><img src="images/Membres DSSC.jpg" alt="" /></a>
+												<h3>Qui sont les membres de notre association ?</h3>
+												<p>Dans notre association de football "Dream Sidi Slimane Cheraa", plusieurs membres jouent un rôle crucial dans son développement. Un exemple pertinent est celui de M. Mabrouk Abdelhak, notre Secrétaire Général, dont l'engagement et la gestion efficace sont essentiels pour le bon fonctionnement de l'association. De même, notre trésorier, M. El Majnioui Abdelkader, assure une gestion financière rigoureuse qui soutient nos activités et projets. Nos membres sont des piliers indispensables de notre structure, contribuant activement à la croissance et à la réussite de notre association.</p>
+											</article>
+							
+											<!-- Post -->
+											<article class="box post">
+												<header>
+													<h2><a href="#">Notre <strong>Objectif</strong> !</a></h2>
+												</header>
+												<a href="#" class="image featured" onclick="openLightbox('images/notre objectif.png')"><img src="images/notre objectif.png" alt="" /></a>
+												<h3>Pourquoi Dream Sidi Slimane Cheraa ?</h3>
+												<p>À Dream Sidi Slimane Cheraa, nous visons à développer de manière intensive les compétences footballistiques de chaque joueur, en les guidant vers l'excellence sur le terrain avec passion et détermination.</p>
+												<ul class="actions">
+													<li><a href="https://www.canva.com/design/DAGIbi6Gx5Q/ysympulS_ySLZf477iptFQ/edit?utm_content=DAGIbi6Gx5Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="button icon solid fa-file">Bienvenue Alors !</a></li>
+												</ul>
+											</article>
+							
+											<!-- Post -->
+											<article class="box post">
+												<header>
+													<h2><a href="#">Notre <strong>Staff !</strong></a></h2>
+												</header>
+												<a href="#" class="image featured" onclick="openLightbox('images/notre staff.jpg')"><img src="images/notre staff.jpg" alt="" /></a>
+												<h3>Quel est le rôle des staffs ?</h3>
+												<p>Notre club de football va bien au-delà d'être simplement un lieu où l'on joue. C'est une véritable communauté où les joueurs sont façonnés par un staff passionné et dévoué. Imaginez un groupe de mentors, d'entraîneurs et de spécialistes qui aident non seulement à améliorer les compétences des joueurs, mais aussi à les guider dans leur développement personnel, avec une attention particulière et une grande expertise. Chaque membre de notre équipe apporte une contribution unique à notre succès. Les entraîneurs agissent comme des guides expérimentés sur le terrain, aidant nos jeunes talents à développer leurs compétences techniques tout en leur inculquant des valeurs comme le fair-play et la résilience. En dehors du terrain, notre équipe administrative gère les détails logistiques pour que tout se passe sans accroc, de l'inscription des joueurs à l'organisation des déplacements pour les tournois. Leur travail discret mais crucial permet à nos joueurs de se concentrer pleinement sur leur développement et leur jeu. Ensemble, ce staff remarquable crée un environnement dynamique et harmonieux où chaque joueur peut s'épanouir. Leur engagement constant pour s'améliorer et leur passion pour le football transforment notre club en un véritable centre de développement et de succès. Chaque victoire, chaque progrès personnel est le résultat de leur engagement indéfectible et de leur expertise collective, propulsant non seulement nos joueurs mais aussi notre club vers de nouveaux sommets de réussite et de reconnaissance.</p>
+												<ul class="actions">
+													<li><a href="https://books.openedition.org/puc/18711?lang=en" class="button icon solid fa-file">Merci D'avoir vu notre Staff !</a></li>
+												</ul>
+											</article>
+							
+										</div>
+							
+										<!-- Sidebar -->
+										<div id="sidebar" class="col-4 col-12-medium">
+											<!-- Excerpts -->
+											<section>
+												<ul class="divided">
+													<li>
+														<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
 																<span class="date">24 Avril 2024</span>
 																<h3><a href="#">Notre Fondation</a></h3>
 															</header>
-															<p>Notre association, Dream Sidi Slimane Cheraa, a été créée le 25 avril 2024.															</p>
+															<p>Notre association, Dream Sidi Slimane Cheraa, a été créée le 25 avril 2024.</p>
 														</article>
-
-												</li>
-												<li>
-
-													<!-- Excerpt -->
+													</li>
+													<li>
+														<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
 																<span class="date">Le Mois 5 "Mai" 2024</span>
@@ -189,23 +331,18 @@
 															</header>
 															<p>Nous avons commencé nos entraînements en mai 2024 .</p>
 														</article>
-
-												</li>
-												<li>
-
-													<!-- Excerpt -->
+													</li>
+													<li>
+														<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
 																<span class="date">Le Mois 6 "Juin" 2024</span>
 																<h3><a href="#">Notre Premier Maillot .</a></h3>
 															</header>
-															<p>
-																
-																Au mois de Juin de 2024 ,nous avons conçu notre premier maillot pour instaurer une unité visuelle parmi nos joueurs. Nous remercions "Veta Sport" pour avoir créé ces maillots, shorts et bas.
-																	</p>
+															<p>Au mois de Juin de 2024, nous avons conçu notre premier maillot pour instaurer une unité visuelle parmi nos joueurs. Nous remercions "Veta Sport" pour avoir créé ces maillots, shorts et bas.</p>
 														</article>
-
-												</li>
+													</li>
+							
 											</ul>
 										</section>
 
@@ -218,7 +355,7 @@
 														<header>
 															<h3><a href="#">Notre Modèle de Maillot des Staffs !</a></h3>
 														</header>
-														<a href="#" class="image left"><img src="images/notre maillot des staffs.png" alt="" /></a>
+														<a href="#" class="image featured" onclick="openLightbox('images/notre maillot des staffs.png')"><img src="images/notre maillot des staffs.png" alt="" /></a>
 														<p>Voici les maillots et shorts portés par le staff de Dream Sidi Slimane Cheraa.
 														</p>
 														<ul class="actions">
@@ -230,7 +367,7 @@
 															<header>
 																<h3><a href="#">Notre Plus Premier Modèle de Maillot des Joueurs !</a></h3>
 															</header>
-															<a href="#" class="image left"><img src="images/notre premier maillot.png" alt="" /></a>
+															<a href="#" class="image featured" onclick="openLightbox('images/notre premier maillot.png')"><img src="images/notre premier maillot.png" alt="" /></a>
 															<p>Voici les maillots et shorts de Dream Sidi Slimane Cheraa, soigneusement choisis pour maintenir une unité vestimentaire parmi les joueurs. Ces tenues sont non seulement fonctionnelles sur le terrain, mais elles incarnent aussi l'esprit d'équipe et la fierté du club. Chaque joueur porte ces couleurs avec passion et détermination, symbolisant l'engagement commun envers l'excellence sportive et l'unité.</p>
 															<ul class="actions">
 																<li><a href="https://dreamsidislimaneccheraa.my.canva.site/black-and-beige-photo-new-post-instagram-post" class="button icon solid fa-file">l'unité vestimentaire des Joueurs compte !</a></li>
@@ -245,7 +382,7 @@
 															<header>
 																<h3><a href="#">Nos Fanions de Football !</a></h3>
 															</header>
-															<a href="#" class="image left"><img src="images/IMG_5108.jpeg" alt="" /></a>
+															<a href="#" class="image featured" onclick="openLightbox('images/IMG_5108.jpeg')"><img src="images/IMG_5108.jpeg" alt="" /></a>
 															<p>En plus des maillots et des shorts, nous avons également créé des fanions de football arborant fièrement notre logo "Dream Sidi Slimane Cheraa". Ces fanions ne sont pas seulement des symboles d'identification pour notre équipe, mais ils remplissent plusieurs fonctions essentielles. Lors des tournois, les fanions sont échangés avec d'autres équipes, symbolisant l'amitié et le respect entre les joueurs et les clubs.</p>
 															<ul class="actions">
 																<li><a href="https://dreamsidislimaneccheraa.my.canva.site/blue-and-grey-minimalist-new-collection-social-media-mockup-instagram-post" class="button icon solid fa-file">Un garantissement d'esprit sportif !</a></li>
@@ -258,33 +395,28 @@
 
 								</div>
 <!-- Post -->
-										<article class="box post">
-											<header>
-												<h2><a href="#">Nos <strong>Catégories</strong>
-											</header>
-											<a href="#" class="image featured"><img src="images/nos categories.png" alt="" /></a>
-											<h3>Quelles sont Les Catégories capables d'en rejoindre ?</h3>
-											<p> Notre club de football est comme un mélange de passion et de potentiel, commençant par les plus jeunes de U8 qui découvrent les joies simples de dribbler et de marquer des buts, jusqu'aux joueurs plus matures de U17 prêts à atteindre de nouveaux sommets dans le jeu.
+<article class="box post">
+    <header>
+        <h2><a href="#">Nos <strong>Catégories</strong></a></h2>
+    </header>
+    <a href="#" class="image featured" onclick="openLightbox('images/nos categories.png')"><img src="images/nos categories.png" alt="" /></a>
+    <h3>Quelles sont Les Catégories capables d'en rejoindre ?</h3>
+    <p>Notre club de football est comme un mélange de passion et de potentiel, commençant par les plus jeunes de U8 qui découvrent les joies simples de dribbler et de marquer des buts, jusqu'aux joueurs plus matures de U17 prêts à atteindre de nouveaux sommets dans le jeu.
 
-												Les U8, ces jeunes joueurs en herbe, courent joyeusement sur le terrain, captivés par la magie de toucher le ballon et de faire leurs premiers passes. Leurs visages illuminés par le sourire du plaisir d'apprendre, ils représentent l'avenir prometteur du club.
-												
-												Les U10 et U12, en pleine découverte de leurs compétences, transforment le terrain en un spectacle de mouvement et de stratégie naissante. Chaque dribble, chaque interception est un pas de plus vers la maîtrise du jeu, captivant leurs familles et leurs supporters.
-												
-												Les U14 et U16, dans l'ambiance compétitive, affinent leur technique et leur coordination, cherchant à dominer le terrain avec une détermination féroce. Leurs matchs sont des ballets d'agilité et de force, où chaque minute compte pour devenir des joueurs de caractère.
-												
-												Enfin, les U17, presque prêts pour le monde adulte du football, portent sur leurs épaules les rêves de gloire et les ambitions professionnelles. Chaque coup de pied, chaque stratégie est une étape cruciale vers l'excellence, où la passion du jeu se mêle à l'ambition de devenir des champions.
-												
-												Ensemble, ces différentes catégories créent une dynamique où chaque joueur, quel que soit son âge, trouve sa place dans l'évolution de notre club de football, qui façonne non seulement des athlètes compétents mais aussi des jeunes adultes imprégnés des valeurs d'équipe et d'esprit sportif.</p>
-											<ul class="actions">
-												<li><a href="#" class="button icon solid fa-file">Reconnais Ta catégorie et Rejoins-nous !</a></li>
-											</ul>
-										</article>
+        Les U8, ces jeunes joueurs en herbe, courent joyeusement sur le terrain, captivés par la magie de toucher le ballon et de faire leurs premiers passes. Leurs visages illuminés par le sourire du plaisir d'apprendre, ils représentent l'avenir prometteur du club.
+        
+        Les U10 et U12, en pleine découverte de leurs compétences, transforment le terrain en un spectacle de mouvement et de stratégie naissante. Chaque dribble, chaque interception est un pas de plus vers la maîtrise du jeu, captivant leurs familles et leurs supporters.
+        
+        Les U14 et U16, dans l'ambiance compétitive, affinent leur technique et leur coordination, cherchant à dominer le terrain avec une détermination féroce. Leurs matchs sont des ballets d'agilité et de force, où chaque minute compte pour devenir des joueurs de caractère.
+        
+        Enfin, les U17, presque prêts pour le monde adulte du football, portent sur leurs épaules les rêves de gloire et les ambitions professionnelles. Chaque coup de pied, chaque stratégie est une étape cruciale vers l'excellence, où la passion du jeu se mêle à l'ambition de devenir des champions.
+        
+        Ensemble, ces différentes catégories créent une dynamique où chaque joueur, quel que soit son âge, trouve sa place dans l'évolution de notre club de football, qui façonne non seulement des athlètes compétents mais aussi des jeunes adultes imprégnés des valeurs d'équipe et d'esprit sportif.</p>
+    <ul class="actions">
+        <li><a href="#" class="button icon solid fa-file">Reconnais Ta catégorie et Rejoins-nous !</a></li>
+    </ul>
+</article>
 
-								</div>
-
-						</div>
-					</div>
-				</section>
 <!-- Posts -->
 <section class="posts" style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center; max-width: 900px;">
     <article style="margin-bottom: 40px;">
@@ -292,7 +424,7 @@
             <h2><a href="#">Nos <strong>Activités et Entrainements !</strong></a></h2>
             <h2><a href="#">Dimanche 09 juin 2024 !</a></h2>
         </header>
-        <a href="#" class="image fit"><img src="images/DSC_0021.jpg" alt="" style="max-width: 100%;" /></a>
+		<a href="#" class="image featured" onclick="openLightbox('images/DSC_0021.jpg')"><img src="images/DSC_0021.jpg" alt="" /></a>
         <p>Le Dimanche 09 Juin 2024 et à partir de midi, on a effectué une séance d'entrainements de nos différentes catégories.</p>
         <ul class="actions special">
             <li><a href="https://dreamsidislimanecheraa.pixieset.com/entrainementsdssc/" target="_blank" rel="noopener noreferrer" class="button">Voir les Photos !</a></li>
@@ -302,17 +434,16 @@
         <header>
             <h2><a href="#">Visite de "Mohamed Chaouch" le Vendredi 21 juin 2024 !</a></h2>
         </header>
-        <a href="#" class="image fit"><img src="images/DSC_0594.JPG" alt="" style="max-width: 100%;" /></a>
+		<a href="#" class="image featured" onclick="openLightbox('images/DSC_0594.JPG')"><img src="images/DSC_0594.JPG" alt="" /></a>
         <p>📸 Photos en marge de la séance d'entraînement de ce vendredi 21 juin 2024 qui a vu la présence de l'ancien joueur international Mohamed Chaouch.
-        <br><br>
-            Le vendredi, notre association de football "Dream Sidi Slimane Charaâ" a accueilli avec grande joie et fierté l'ancien joueur de l'équipe nationale marocaine Mohamed Chaouch. Sa visite a été un soutien moral et une source de motivation pour tous les jeunes joueurs de notre école.
-        <br><br>
-            Mohamed Chaouch, connu pour ses compétences exceptionnelles et son esprit sportif exemplaire, a été une étoile montante de l'équipe nationale et un pilier du football marocain. Au cours de sa carrière professionnelle, il a contribué à de nombreuses réalisations du football national et a été un modèle à suivre pour chaque jeune joueur.
-        <br><br>
-            Nous souhaitons exprimer notre profonde gratitude à Monsieur Chaouch pour avoir consacré une partie de son temps à visiter notre école. Cette visite a été une occasion formidable pour nos enfants d'apprendre de ses expériences et de s'inspirer de ses succès. Nous sommes convaincus que ses conseils et ses orientations resteront gravés dans les esprits de tous, et seront un moteur puissant pour leur parcours sportif.
-        <br><br>
-            Merci, Mohamed Chaouch, pour cette visite exceptionnelle et pour votre grand soutien aux jeunes sportifs. Nous vous souhaitons une bonne santé et beaucoup de succès dans toutes vos futures entreprises.
-        </p>
+
+			Le vendredi, notre association de football "Dream Sidi Slimane Charaâ" a accueilli avec grande joie et fierté l'ancien joueur de l'équipe nationale marocaine Mohamed Chaouch. Sa visite a été un soutien moral et une source de motivation pour tous les jeunes joueurs de notre école.
+			
+			Mohamed Chaouch, connu pour ses compétences exceptionnelles et son esprit sportif exemplaire, a été une étoile montante de l'équipe nationale et un pilier du football marocain. Au cours de sa carrière professionnelle, il a contribué à de nombreuses réalisations du football national et a été un modèle à suivre pour chaque jeune joueur.
+			
+			Nous souhaitons exprimer notre profonde gratitude à Monsieur Chaouch pour avoir consacré une partie de son temps à visiter notre école. Cette visite a été une occasion formidable pour nos enfants d'apprendre de ses expériences et de s'inspirer de ses succès. Nous sommes convaincus que ses conseils et ses orientations resteront gravés dans les esprits de tous, et seront un moteur puissant pour leur parcours sportif.
+			
+			Merci, Mohamed Chaouch, pour cette visite exceptionnelle et pour votre grand soutien aux jeunes sportifs. Nous vous souhaitons une bonne santé et beaucoup de succès dans toutes vos futures entreprises.</p>
         <ul class="actions special">
             <li><a href="https://dreamsidislimanecheraa.pixieset.com/visitedemohammedchaouchentraiinements/" target="_blank" rel="noopener noreferrer" class="button">Voir notre séance d'entrainement en compagnie de Mohamed Chaouch !</a></li>
         </ul>
@@ -321,27 +452,26 @@
         <header>
             <h2><a href="#">Sortie Saidia le 22-23 Juin 2024 !</a></h2>
         </header>
-        <a href="#" class="image fit"><img src="images/IMG-20240623-WA0200.jpg" alt="" style="max-width: 100%;" /></a>
-        <p>L'association Dream Sidi Slimane Cheraa Sportive a organisé une sortie à Saïdia le 22 juin 2024. Nous avons passé une nuit sur place et profité d'une journée bien remplie. À notre arrivée, nous avons pris part à une séance d'entraînement intense sur la plage, suivie de plusieurs activités d'équipe. Cette expérience a renforcé notre cohésion et offert une pause rafraîchissante. Nous sommes rentrés le 23 juin 2024, revigorés et plus unis que jamais.</p>
+		<a href="#" class="image featured" onclick="openLightbox('images/IMG-20240623-WA0200.jpg')"><img src="images/IMG-20240623-WA0200.jpg" alt="" /></a>
+        <p>L'association Dream Sidi Slimane Cheraa Sportive a organisé une sortie à Saïdia le 22 juin 2024. Nous avons passé une nuit sur place et profité d'une journée bien remplie. À notre arrivée, nous avons pris part à une séance d'entraînement intense sur la plage, suivie de plusieurs activités d'équipe. Cette expérience a renforcé notre cohésion et offert une pause rafraîchissante. Nous sommes rentrés le 23 juin 2024, revigorés et plus unis que jamais.		</p>
         <ul class="actions special">
             <li><a href="https://dreamsidislimanecheraa.pixieset.com/sortiedesaidia/" target="_blank" rel="noopener noreferrer" class="button">Voir des photos qui démontrent notre sortie et activités !</a></li>
         </ul>
     </article>
 </section>
+<section class="posts" style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center; max-width: 900px;">
+    <article style="margin-bottom: 40px;">
+		<header>
+        <h2><a href="#">Match Amical U14 contre Rs Berkane Academy le samedi 07 septembre 2024 !</a></h2>
+      </header>
+	  <a href="#" class="image featured" onclick="openLightbox('images/farsi et mustapha.jpg')"><img src="images/farsi et mustapha.jpg" alt="" /></a>
+      <p>L'école Dream Sidi Slimane à Charaa a affronté en match amical l'Académie de la RS Berkane le samedi 7 septembre 2024 à 15h00, au Centre de Formation Sportive de la RS Berkane. Un grand merci aux responsables de l'équipe orange pour l'invitation	  </p>
+      <ul class="actions special">
+        <li><a href="https://dreamsidislimanecheraa.pixieset.com/matchamicalcontrersberkaneacademy/" target="_blank" rel="noopener noreferrer" class="button">Voir des photos qui démontrent notre match !</a></li>
+      </ul>
+    </article>
+  </section>
 
-	<section style="display: flex; justify-content: center; align-items: center; text-align: center;">
-		<article style="max-width: 800px; margin: 0 auto;">
-		  <header>
-			<h2><a href="#">Match Amical U14 contre Rs Berkane Academy le samedi 07 septembre 2024 !</a></h2>
-		  </header>
-		  <a href="#" class="image fit"><img src="images/farsi et mustapha.jpg" alt="" style="max-width: 100%;" /></a>
-		  <p>L'école Dream Sidi Slimane à Charaa a affronté en match amical l'Académie de la RS Berkane le samedi 7 septembre 2024 à 15h00, au Centre de Formation Sportive de la RS Berkane.
-			 Un grand merci aux responsables de l'équipe orange pour l'invitation.</p>
-		  <ul class="actions special">
-			<li><a href="https://dreamsidislimanecheraa.pixieset.com/matchamicalcontrersberkaneacademy/" target="_blank" rel="noopener noreferrer" class="button">Voir des photos qui démontrent notre match !</a></li>
-		  </ul>
-		</article>
-	  </section>
 	  
 
 <!DOCTYPE html>
